@@ -1,7 +1,7 @@
 
 ---
 layout: post
-title: "Resonare Project Journal"
+title: "Resonare Journal Test"
 date: 2026-10-17
 categories:
   - resonare

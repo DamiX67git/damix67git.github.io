@@ -14,29 +14,31 @@ permalink: /news/
 
   <div class="news-list">
     {% for post in site.posts %}
-      <article class="news-card">
-        <p class="news-meta">
-          <time datetime="{{ post.date | date_to_xmlschema }}">
-            {{ post.date | date: "%d.%m.%Y" }}
-          </time>
+      
+      <a class="news-card-link" href="{{ post.url | relative_url }}">
+        <article class="news-card">
+          <p class="news-meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">
+              {{ post.date | date: "%d.%m.%Y" }}
+            </time>
 
-          {% for category in post.categories %}
-            <span class="news-category">{{ category | replace: "-", " " }}</span>
-          {% endfor %}
-        </p>
+            {% for category in post.categories %}
+              <span class="news-category">
+                {{ category | replace: "-", " " }}
+              </span>
+            {% endfor %}
+          </p>
 
-        <h2>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </h2>
+          <h2 class="news-card-title">{{ post.title }}</h2>
 
-        {% if post.excerpt %}
-          <p>{{ post.excerpt | strip_html | truncate: 220 }}</p>
-        {% endif %}
+          {% if post.excerpt %}
+            <p>{{ post.excerpt | strip_html | truncate: 220 }}</p>
+          {% endif %}
 
-        <a class="text-link" href="{{ post.url | relative_url }}">
-          Read update →
-        </a>
-      </article>
+          <span class="text-link">Read update →</span>
+        </article>
+      </a>
+
     {% endfor %}
 
     {% unless site.posts.size > 0 %}

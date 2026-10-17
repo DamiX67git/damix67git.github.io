@@ -645,7 +645,6 @@ button:focus-visible {
     max-width: 440px;
   }
 
-
   .hero h1 {
     font-size: clamp(3.1rem, 13vw, 5rem);
   }
@@ -685,72 +684,6 @@ button:focus-visible {
     animation-duration: 0.01ms !important;
   }
 }
-
-
-/* Subtle block-inspired details */
-
-.project-card {
-  position: relative;
-  cursor: pointer;
-  text-decoration: none;
-  overflow: hidden;
-  transition:
-    transform 180ms ease,
-    border-color 180ms ease,
-    background 180ms ease;
-}
-
-.project-card::before,
-.project-card::after {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  content: "";
-  pointer-events: none;
-  opacity: 0.55;
-  transition: opacity 180ms ease;
-}
-
-.project-card::before {
-  top: 0;
-  left: 0;
-  border-top: 2px solid var(--accent);
-  border-left: 2px solid var(--accent);
-}
-
-.project-card::after {
-  right: 0;
-  bottom: 0;
-  border-right: 2px solid var(--accent);
-  border-bottom: 2px solid var(--accent);
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-}
-
-.project-card:hover::before,
-.project-card:hover::after {
-  opacity: 1;
-}
-
-.project-card:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 4px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .project-card,
-  .project-card::before,
-  .project-card::after {
-    transition: none;
-  }
-
-  .project-card:hover {
-    transform: none;
-  }
-}
-
 
 /* Project news */
 
@@ -849,4 +782,32 @@ button:focus-visible {
   .news-card {
     padding: 20px;
   }
+}
+
+/* News cards: the whole card can be a link */
+.news-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.news-card-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 10px;
+}
+
+.news-card-link .news-card {
+  height: 100%;
+  cursor: pointer;
+}
+
+.news-card-link:hover .news-card h2 a,
+.news-card-link:hover .news-card-title {
+  color: var(--accent);
+}
+
+.news-card-title {
+  color: var(--text);
+  transition: color 160ms ease;
 }
