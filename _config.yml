@@ -1,0 +1,19 @@
+title: DamiX67 Projects
+description: Minecraft mods, experiments and development.
+url: "https://damix67git.github.io"
+baseurl: "/"
+
+markdown: kramdown
+permalink: pretty
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project

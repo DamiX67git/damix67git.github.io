@@ -1,0 +1,89 @@
+---
+layout: default
+title: Welcome
+description: Discover my Minecraft modding projects and experiments.
+body_class: home-page
+---
+
+<section class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">INDEPENDENT MINECRAFT DEVELOPMENT</p>
+
+    <h1>
+      Worlds worth<br>
+      <span>discovering.</span>
+    </h1>
+
+    <p class="hero-description">
+      A collection of Minecraft mods, experimental ideas,
+      custom worlds and projects built from imagination.
+    </p>
+
+    <div class="hero-actions">
+      <a class="button button-primary" href="#projects">
+        Explore projects
+      </a>
+
+      <a class="button button-secondary"
+         href="https://github.com/DamiX67git">
+        GitHub profile
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-decoration" aria-hidden="true">
+    <div class="orbit orbit-one"></div>
+    <div class="orbit orbit-two"></div>
+    <div class="orbit-core"></div>
+  </div>
+</section>
+
+<section class="section projects-section" id="projects">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">THE WORKSHOP</p>
+      <h2>Featured projects</h2>
+    </div>
+
+    <p class="section-description">
+      Different ideas. Different worlds. One place to explore them.
+    </p>
+  </div>
+
+  <div class="project-grid">
+    {% assign sorted_projects = site.projects | sort: "order" %}
+
+    {% for project in sorted_projects %}
+      <article class="project-card {{ project.theme }}">
+        <div class="project-card-top">
+          <span class="project-category">
+            {{ project.category | default: "Minecraft Mod" }}
+          </span>
+
+          <span class="project-status">
+            {{ project.status | default: "In development" }}
+          </span>
+        </div>
+
+        <h3>{{ project.title }}</h3>
+
+        <p>{{ project.short_description }}</p>
+
+        <a class="project-link" href="{{ project.url | relative_url }}">
+          Discover project <span aria-hidden="true">↗</span>
+        </a>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="closing-section">
+  <p class="eyebrow">MORE THAN JUST MODS</p>
+  <h2>Every project starts with an idea.</h2>
+  <p>
+    Follow the development, explore the concepts and see what comes next.
+  </p>
+  <a class="text-link" href="{{ '/about/' | relative_url }}">
+    About this workshop →
+  </a>
+</section>

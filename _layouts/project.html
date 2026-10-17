@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<article class="project-page {{ page.theme }}">
+  <header class="page-intro">
+    <p class="eyebrow">
+      {{ page.category | default: "MINECRAFT PROJECT" }}
+    </p>
+
+    <h1>{{ page.title }}</h1>
+
+    <p>{{ page.description | default: page.short_description }}</p>
+
+    <div class="project-meta">
+      {% if page.status %}
+        <span>Status: {{ page.status }}</span>
+      {% endif %}
+
+      {% if page.minecraft_version %}
+        <span>Minecraft {{ page.minecraft_version }}</span>
+      {% endif %}
+
+      {% if page.loader %}
+        <span>{{ page.loader }}</span>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  {% if page.repository %}
+    <a class="button button-secondary"
+       href="{{ page.repository }}">
+      View repository ↗
+    </a>
+  {% endif %}
+</article>

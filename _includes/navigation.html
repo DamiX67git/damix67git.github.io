@@ -1,0 +1,26 @@
+<header class="site-header">
+  <a class="brand" href="{{ '/' | relative_url }}">
+    <span class="brand-mark">D</span>
+    <span class="brand-name">DamiX67</span>
+  </a>
+
+  <button
+    class="menu-toggle"
+    type="button"
+    aria-label="Open navigation"
+    aria-expanded="false"
+    aria-controls="main-navigation"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="main-navigation" id="main-navigation">
+    {% for item in site.data.navigation %}
+      <a href="{{ item.url | relative_url }}">
+        {{ item.title }}
+      </a>
+    {% endfor %}
+  </nav>
+</header>
