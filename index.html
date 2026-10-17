@@ -1,22 +1,22 @@
 ---
 layout: default
 title: Welcome
-description: Discover my Minecraft modding projects and experiments.
+description: Minecraft projects and worlds connected by imagination.
 body_class: home-page
 ---
 
 <section class="hero">
   <div class="hero-content">
-    <p class="eyebrow">INDEPENDENT MINECRAFT DEVELOPMENT</p>
+    <p class="eyebrow">A MULTIVERSE OF POSSIBILITIES</p>
 
     <h1>
-      Worlds worth<br>
-      <span>discovering.</span>
+      Worlds born<br>
+      <span>from the Prism.</span>
     </h1>
 
     <p class="hero-description">
-      A collection of Minecraft mods, experimental ideas,
-      custom worlds and projects built from imagination.
+      Minecraft mods, distant worlds and experiments shaped by imagination.
+      Every project opens a different path to explore.
     </p>
 
     <div class="hero-actions">
@@ -32,16 +32,107 @@ body_class: home-page
   </div>
 
   <div class="hero-decoration" aria-hidden="true">
-    <div class="orbit orbit-one"></div>
-    <div class="orbit orbit-two"></div>
-    <div class="orbit-core"></div>
+    <div class="prism-aura"></div>
+    <div class="prism-starfield"></div>
+
+    <svg class="prism-crystal"
+         viewBox="0 0 420 520"
+         xmlns="http://www.w3.org/2000/svg"
+         role="presentation">
+      <defs>
+        <linearGradient id="prism-edge" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#f1fbff"/>
+          <stop offset=".38" stop-color="#a9e8ed"/>
+          <stop offset=".72" stop-color="#b5b5ff"/>
+          <stop offset="1" stop-color="#f4c8d9"/>
+        </linearGradient>
+
+        <linearGradient id="prism-left" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#eafaff" stop-opacity=".96"/>
+          <stop offset=".55" stop-color="#8de5e0" stop-opacity=".72"/>
+          <stop offset="1" stop-color="#6377c8" stop-opacity=".32"/>
+        </linearGradient>
+
+        <linearGradient id="prism-right" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#d8e9ff" stop-opacity=".85"/>
+          <stop offset=".5" stop-color="#a5a9ed" stop-opacity=".6"/>
+          <stop offset="1" stop-color="#f4a9d5" stop-opacity=".72"/>
+        </linearGradient>
+
+        <linearGradient id="prism-warm" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#f8e5d1" stop-opacity=".8"/>
+          <stop offset="1" stop-color="#eea8b9" stop-opacity=".25"/>
+        </linearGradient>
+
+        <filter id="prism-glow" x="-80%" y="-80%" width="260%" height="260%">
+          <feGaussianBlur stdDeviation="15"/>
+        </filter>
+      </defs>
+
+      <!-- Soft light behind the crystal -->
+      <path
+        d="M210 28 L330 148 L292 348 L204 466 L104 338 L78 158 Z"
+        fill="#9dc9ff"
+        opacity=".22"
+        filter="url(#prism-glow)"/>
+
+      <!-- Main crystal silhouette -->
+      <g stroke="url(#prism-edge)" stroke-width="1.5" stroke-linejoin="round">
+        <path d="M210 34 L330 148 L204 190 L82 157 Z"
+              fill="#eafaff" fill-opacity=".82"/>
+        <path d="M82 157 L204 190 L204 466 L105 338 Z"
+              fill="url(#prism-left)"/>
+        <path d="M204 190 L330 148 L292 348 L204 466 Z"
+              fill="url(#prism-right)"/>
+
+        <!-- Facets -->
+        <path d="M210 34 L204 190 L82 157 Z"
+              fill="#ffffff" fill-opacity=".48"/>
+        <path d="M210 34 L330 148 L204 190 Z"
+              fill="#c9dfff" fill-opacity=".55"/>
+        <path d="M82 157 L204 190 L145 299 Z"
+              fill="#e8ffff" fill-opacity=".3"/>
+        <path d="M204 190 L330 148 L247 290 Z"
+              fill="#d6c8ff" fill-opacity=".36"/>
+        <path d="M204 190 L145 299 L204 466 Z"
+              fill="#6fd8d0" fill-opacity=".3"/>
+        <path d="M204 190 L247 290 L204 466 Z"
+              fill="url(#prism-warm)"/>
+        <path d="M145 299 L247 290 L204 466 Z"
+              fill="#e7eaff" fill-opacity=".2"/>
+        <path d="M247 290 L292 348 L204 466 Z"
+              fill="#f4a9d5" fill-opacity=".22"/>
+      </g>
+
+      <!-- Restrained highlights -->
+      <path d="M210 34 L204 190 L82 157"
+            fill="none" stroke="#ffffff" stroke-opacity=".9" stroke-width="2"/>
+      <path d="M204 190 L204 466"
+            fill="none" stroke="#ffffff" stroke-opacity=".55"/>
+      <path d="M330 148 L292 348"
+            fill="none" stroke="#ffffff" stroke-opacity=".65"/>
+      <path d="M104 338 L204 466 L292 348"
+            fill="none" stroke="#e3f7ff" stroke-opacity=".5"/>
+
+      <!-- Small floating fragments -->
+      <path d="M350 100 L366 116 L347 137 L338 119 Z"
+            fill="#c9eaff" fill-opacity=".75"/>
+      <path d="M64 290 L77 302 L63 321 L54 306 Z"
+            fill="#f1bdd8" fill-opacity=".7"/>
+      <path d="M306 390 L317 399 L305 413 L298 401 Z"
+            fill="#b6e8e1" fill-opacity=".8"/>
+    </svg>
+
+    <span class="prism-spark spark-one"></span>
+    <span class="prism-spark spark-two"></span>
+    <span class="prism-spark spark-three"></span>
   </div>
 </section>
 
 <section class="section projects-section" id="projects">
   <div class="section-heading">
     <div>
-      <p class="eyebrow">THE WORKSHOP</p>
+      <p class="eyebrow">FRAGMENTS OF THE PRISM</p>
       <h2>Featured projects</h2>
     </div>
 
@@ -52,7 +143,6 @@ body_class: home-page
 
   <div class="project-grid">
     {% assign sorted_projects = site.projects | sort: "order" %}
-
     {% for project in sorted_projects %}
       <article class="project-card {{ project.theme }}">
         <div class="project-card-top">
@@ -78,10 +168,10 @@ body_class: home-page
 </section>
 
 <section class="closing-section">
-  <p class="eyebrow">MORE THAN JUST MODS</p>
-  <h2>Every project starts with an idea.</h2>
+  <p class="eyebrow">THE NEXT FRAGMENT</p>
+  <h2>There is always another world to discover.</h2>
   <p>
-    Follow the development, explore the concepts and see what comes next.
+    Explore the projects, follow their progress and see what takes shape next.
   </p>
   <a class="text-link" href="{{ '/about/' | relative_url }}">
     About this workshop →
